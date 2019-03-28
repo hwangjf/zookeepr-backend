@@ -1,11 +1,7 @@
 class AnimalSerializer
   include FastJsonapi::ObjectSerializer
 
-  attributes :id, :name, :species_name, :diet
-
-  # def species_name
-  #   self.object.species.name
-  # end
+  attributes :id, :name, :species_name, :diet, :image_url
 
   attribute :species_name do |object|
     object.species.name
