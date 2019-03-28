@@ -6,6 +6,10 @@ class AnimalSerializer
   def species_name
     self.object.species.name
   end
+
+  attribute :species_name do |object|
+    self.object.species.name
+  end
 end
 
 
