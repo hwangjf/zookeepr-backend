@@ -4,7 +4,7 @@ class Api::V1::AnimalsController < ApplicationController
     @animal = Animal.new(name: params[:name], species: @species, diet: params["diet"].to_i)
 
     if @animal.save
-      render json: @animal
+      render json: AnimalSerializer.new(@animal).serialized_json
     else
       render json: @animal.errors.full_messages, status: 422
     end
@@ -13,20 +13,20 @@ class Api::V1::AnimalsController < ApplicationController
   def show
     @animal = Animal.find(params[:id])
 
-    render json: @animal
+    render json: AnimalSerializer.new(@animal).serialized_json
   end
 
   def index
     @animals = Animal.all
 
-    render json: @animals
+    render json: AnimalSerializer.new(@animals).serialized_json
   end
 
   def destroy
     @animal = Animal.find(params[:id])
     @animal.destroy
 
-    render json: @animal
+    render json: AnimalSerializer.new(@animal).serialized_json
   end
 
   # def animal_params
