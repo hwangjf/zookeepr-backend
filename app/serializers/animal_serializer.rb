@@ -3,12 +3,12 @@ class AnimalSerializer
 
   attributes :id, :name, :species_name, :diet
 
-  def species_name
-    self.object.species.name
-  end
+  # def species_name
+  #   self.object.species.name
+  # end
 
   attribute :species_name do |object|
-    self.object.species.name
+    object.species.name
   end
 end
 
