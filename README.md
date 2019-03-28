@@ -5,18 +5,18 @@
 * Heroku account & Heroku CLI
   * `$ brew tap heroku/brew && brew install heroku`
 * Github repo of your application
-  * `git push heroku master`
-  * `heroku run ...`
+  * `git push heroku master` - to push to heroku
+  * `heroku run ...` -
 * how do we hide environment variables? secret keys, api keys, and private information
   * specifying environment
     * dotenv gem - suggested use for development .env file, .gitignore
     * What about production?
+      * config variables
 * common issues - wrong version of ruby/rails, upgrade to ruby version 2.5+, Rails version 5+
 * how to serve up a static page?
-  * rack server to display out index.html file
+  * rack server to display index.html file
 * fast-json api
 * namespace routes
-
 
 ### Heroku CLI Tool
 - Install Tool `brew tap heroku/brew && brew install heroku`
@@ -47,7 +47,6 @@ When deploying a React app built using `create-react-app` you must specify a bui
 - User `heroku run <TERMINAL COMMAND>` to run terminal commands on the Heroku server
   - ie. `heroku run rails console`
 
-
 ### Common Problems
 
 - Ruby version must be 2.5 and greater
@@ -59,11 +58,11 @@ When deploying a React app built using `create-react-app` you must specify a bui
 	- Use the adapter pattern so your fetches are all in one place
 	- Use the environment (`process.env.NODE_ENV`) to determine which URL to use
 
-
-how to install the heroku CLI  - https://devcenter.heroku.com/articles/git#prerequisites-install-git-and-the-heroku-cli
-how to deploy with heroku cli and git - https://devcenter.heroku.com/articles/git
-
-how to install with github pages - https://pages.github.com/
-faker gem - https://github.com/stympy/faker
-dotenv gem - https://github.com/bkeepers/dotenv
-fast json gem - serializer https://github.com/Netflix/fast_jsonapi
+Helpful link:
+* how to install the heroku CLI  - https://devcenter.heroku.com/articles/git#prerequisites-install-git-and-the-heroku-cli
+* how to deploy with heroku cli and git - https://devcenter.heroku.com/articles/git
+* how to deploy static site using Rack - https://devcenter.heroku.com/articles/static-sites-ruby
+* how to install with github pages - https://pages.github.com/
+* faker gem - https://github.com/stympy/faker
+* dotenv gem - https://github.com/bkeepers/dotenv
+* fast json gem - serializer https://github.com/Netflix/fast_jsonapi
