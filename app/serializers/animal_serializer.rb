@@ -1,4 +1,6 @@
-class AnimalSerializer < ActiveModel::Serializer
+class AnimalSerializer
+  include FastJsonapi::ObjectSerializer
+
   attributes :id, :name, :species_name, :diet
 
   def species_name
