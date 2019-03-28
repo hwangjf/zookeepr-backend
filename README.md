@@ -1,24 +1,8 @@
-# README
+# How to Deploy an application on Heroku
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## What is required in order to deploy on Heroku
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Heroku account
+* Github repo of your application
+* hide environment variables - secret keys, api keys, and private information
+* common issues - wrong version of ruby/rails, upgrade to ruby version 2.5+, Rails version 5+

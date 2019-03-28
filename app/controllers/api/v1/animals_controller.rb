@@ -1,4 +1,4 @@
-class AnimalsController < ApplicationController
+class Api::V1::AnimalsController < ApplicationController
   def create
     @species = Species.find_or_create_by(name: params[:species_name])
     @animal = Animal.new(name: params[:name], species: @species, diet: params["diet"].to_i)
